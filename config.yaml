@@ -2,7 +2,8 @@
 
 # Data & Preprocessing Parameters
 data:
-  raw_data_path: "data/raw/Suicide_Detection.csv" # Path relative to project root
+  #raw_data_path: "data/raw/Suicide_Detection.csv" # Path relative to project root
+  raw_data_path: "D://PES Mtech//Sem 4//DataSet//Suicide_Detection//Suicide_Detection.csv"
   processed_data_path: "data/processed/processed_data.csv"
   text_column: "text"
   target_column: "class"
