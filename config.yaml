@@ -1,0 +1,37 @@
+# config.yaml
+
+# Data & Preprocessing Parameters
+data:
+  raw_data_path: "data/raw/Suicide_Detection.csv" # Path relative to project root
+  processed_data_path: "data/processed/processed_data.csv"
+  text_column: "text"
+  target_column: "class"
+  test_size: 0.15
+  random_state: 42
+  lemmatize: True
+  remove_stopwords: False
+
+# Classification Parameters
+classification:
+  model_name: "distilbert-base-uncased"
+  max_length: 128
+  batch_size: 16
+  num_epochs: 3
+  learning_rate: 2e-5
+  output_dir: "models/classifier/"
+  tokenizer_path: "models/classifier/tokenizer/"
+  model_path: "models/classifier/model.pt"
+  predictions_output_path: "data/predictions/predictions_raw.csv"
+  
+# Temporal Analysis Parameters
+temporal_analysis:
+  input_predictions_path: "data/predictions/predictions_raw.csv"
+  output_trends_path: "data/predictions/trends_output.csv"
+  window_size: 10
+  moving_average_period: 5
+  alert_threshold: 0.8
+  consecutive_alerts_required: 5
+
+# Dashboard Parameters
+dashboard:
+  input_data_for_dashboard: "data/predictions/trends_output.csv"
