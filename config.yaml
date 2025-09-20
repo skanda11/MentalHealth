@@ -1,5 +1,15 @@
 # config.yaml
 
+# Google Drive Ingestion Parameters
+gdrive_ingestion:
+  gdrive_file_id: "YOUR_GOOGLE_DRIVE_FILE_ID_HERE"  # <-- PASTE YOUR FILE ID HERE
+  output_path: "data/raw/Suicide_Detection.csv"   # This is where the file will be saved
+
+# Data & Preprocessing Parameters
+data:
+  raw_data_path: "data/raw/Suicide_Detection.csv" # This should match the output_path above
+  processed_data_path: "data/processed/processed_data.csv"
+
 # Data & Preprocessing Parameters
 data:
   #raw_data_path: "data/raw/Suicide_Detection.csv" # Path relative to project root
